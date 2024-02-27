@@ -1,0 +1,202 @@
+:root {
+	--font-family: "Montserrat", sans-serif;
+	--content-width: 1440px;
+	--container-offset: 20px;
+	--container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+	--white-color: #fff;
+	--black-color: #141b22;
+	--grey-color: #a0a0a0;
+	--body-bg-color: #eaeef6;
+	--link-bg-color: #f1eeff;
+	--link-text-color: #6558d3;
+}
+.custom-checkbox__field:checked + .custom-checkbox__content::after {
+	opacity: 1;
+}
+.custom-checkbox__field:focus + .custom-checkbox__content::before {
+	outline: red solid 2px;
+	outline-offset: 2px;
+}
+.custom-checkbox__field:disabled + .custom-checkbox__content {
+	opacity: 0.4;
+	pointer-events: none;
+}
+@font-face {
+	font-family: Montserrat;
+	src: url(../fonts/Montserrat-Regular.woff2) format("woff2");
+	font-weight: 400;
+	font-display: swap;
+	font-style: normal;
+}
+@font-face {
+	font-family: Montserrat;
+	src: url(../fonts/Montserrat-Medium.woff2) format("woff2");
+	font-weight: 500;
+	font-display: swap;
+	font-style: normal;
+}
+@font-face {
+	font-family: Montserrat;
+	src: url(../fonts/Montserrat-SemiBold.woff2) format("woff2");
+	font-weight: 600;
+	font-display: swap;
+	font-style: normal;
+}
+@font-face {
+	font-family: Montserrat;
+	src: url(../fonts/Montserrat-Bold.woff2) format("woff2");
+	font-weight: 700;
+	font-display: swap;
+	font-style: normal;
+}
+html {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+*,
+::after,
+::before {
+	-webkit-box-sizing: inherit;
+	box-sizing: inherit;
+}
+.page {
+	height: 100%;
+	font-family: var(--font-family, sans-serif);
+	-webkit-text-size-adjust: 100%;
+}
+.page__body {
+	margin: 0;
+	min-width: 320px;
+	min-height: 100%;
+	font-size: 16px;
+	background: var(--body-bg-color);
+}
+.site-container {
+	overflow: hidden;
+}
+.btn-reset {
+	border: none;
+	padding: 0;
+	background-color: transparent;
+	cursor: pointer;
+}
+.list-reset {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.container {
+	margin: 0 auto;
+	padding: 0 var(--container-offset);
+	max-width: var(--container-width);
+}
+.title {
+	margin: 0;
+}
+.title__h2 {
+	font-size: 42px;
+	line-height: 1.25;
+	font-weight: 500;
+	color: var(--link-text-color);
+	background: var(--white-color);
+	padding: 12px 20px;
+	border-radius: 16px;
+	margin-bottom: 20px;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+}
+.title__h3 {
+	font-size: 24px;
+	line-height: 1.25;
+	font-weight: 400;
+}
+@media (max-width: 768px) {
+	.title__h2 {
+		font-size: 34px;
+	}
+}
+@media (max-width: 480px) {
+	.title__h2 {
+		font-size: 26px;
+	}
+}
+@media (max-width: 375px) {
+	.title__h2 {
+		font-size: 22px;
+	}
+}
+.tests__container {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.tests__list {
+	display: -ms-grid;
+	display: grid;
+	-ms-grid-columns: (1fr) [12];
+	grid-template-columns: repeat(12, 1fr);
+	gap: 20px;
+}
+.tests__test {
+	-ms-grid-column-span: 4;
+	grid-column: 4 span;
+	padding: 24px;
+	border-radius: 16px;
+	-webkit-box-shadow: 0 30px 30px -25px rgba(65, 51, 183, 0.25);
+	box-shadow: 0 30px 30px -25px rgba(65, 51, 183, 0.25);
+	background: var(--white-color);
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	justify-content: space-between;
+}
+.tests__title {
+	margin-bottom: 16px;
+}
+.tests__descr {
+	color: var(--grey-color);
+	font-size: 16px;
+	margin-bottom: 20px;
+	line-height: 1.5;
+}
+.tests__link {
+	display: block;
+	padding: 12px 20px;
+	background: var(--link-bg-color);
+	border-radius: 8px;
+	color: var(--link-text-color);
+	font-weight: 600;
+	text-decoration: none;
+	width: -webkit-fit-content;
+	width: -moz-fit-content;
+	width: fit-content;
+	-webkit-transition: color 0.3s, background 0.3s;
+	transition: color 0.3s, background 0.3s;
+}
+.tests__link:hover {
+	background: var(--link-text-color);
+	color: var(--white-color);
+}
+@media (max-width: 768px) {
+	.tests__test {
+		-ms-grid-column-span: 6;
+		grid-column: 6 span;
+	}
+}
+@media (max-width: 480px) {
+	.tests__list {
+		-webkit-column-gap: 0;
+		-moz-column-gap: 0;
+		column-gap: 0;
+	}
+	.tests__test {
+		-ms-grid-column-span: 12;
+		grid-column: 12 span;
+	}
+}
