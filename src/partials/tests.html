@@ -1,59 +1,125 @@
 <section class="tests">
 	<div class="container tests__container">
-		<h2 class="title title__h2 tests__title-main">Список доступных тестов</h2>
-		<div class="tests__list">
-			<div class="tests__test">
-				<div class="tests__container-text">
-					<h3 class="title title__h3 tests__title">Название теста</h3>
-					<p class="title tests__descr">
-						Пара строчек текста, описывающие то, о чем будут вопросы/содержание теста
-					</p>
+		<div class="tests__selector tests__selector-hidden">
+			<h2 class="title title__h2">Список доступных тестов</h2>
+			<div class="tests__list">
+				<div class="tests__item">
+					<div class="tests__container-text">
+						<h3 class="title title__h3 tests__title">Опросник 1</h3>
+						<p class="title tests__descr">
+							Перед вами опросник с двумя колонками с противоположными по смыслу суждениями. Каждое из них
+							– своеобразный параметр психологического климата в коллективе. Между данными антиподами
+							пятибалльная шкала. Чем ближе к левому или правому суждению в каждой паре вы сделаете
+							отметку, тем более выражен данный признак в вашем коллективе.
+						</p>
+					</div>
+					<button class="btn-reset tests__button" data-test-id="1">Перейти</button>
 				</div>
-				<a href="https://google.com/tests/1" target="_blank" class="btn-reset title tests__link"> Перейти </a>
-			</div>
-			<div class="tests__test">
-				<div class="tests__container-text">
-					<h3 class="title title__h3 tests__title">Название теста в две строки для примера</h3>
-					<p class="title tests__descr">
-						Три строчки текста, описывающие то, о чем будут вопросы/содержание теста, и даже представить не
-						могу, что еще
-					</p>
+				<div class="tests__item">
+					<div class="tests__container-text">
+						<h3 class="title title__h3 tests__title">Опросник 2</h3>
+						<p class="title tests__descr">
+							Вам предлагается 10 утверждений, отражающих Ваше отношение к подразделению, в котором Вы
+							сейчас работаете, и к организации в целом. Оцените степень Вашего согласия с данными
+							утверждениями по следующей пятибалльной шкале:
+						</p>
+					</div>
+					<button class="btn-reset tests__button" data-test-id="2">Перейти</button>
 				</div>
-				<a href="https://google.com/tests/2" target="_blank" class="btn-reset title tests__link"> Перейти </a>
 			</div>
-			<div class="tests__test">
-				<div class="tests__container-text">
-					<h3 class="title title__h3 tests__title">
-						Название теста в две строки для примера, а может даже и три строки
-					</h3>
-					<p class="title tests__descr">
-						Три строчки текста, описывающие то, о чем будут вопросы/содержание теста, и даже представить не
-						могу, что еще
-					</p>
+		</div>
+		<div class="tests__test tests__test-1">
+			<h2 class="title title__h2 tests__title-test">Опросник 1</h2>
+			<form action="#" class="tests__form" method="get">
+				<div class="tests__body">
+					<div class="tests__row">
+						<div class="tests__cell tests__cell-field">ФИО оцениваемого</div>
+						<div class="tests__cell tests__cell-input">
+							<input
+								type="text"
+								required
+								class="tests__input tests__input-text"
+								id="fio"
+								placeholder="Ваше ФИО"
+							/>
+						</div>
+					</div>
+					<div class="tests__row">
+						<div class="tests__cell tests__cell-field">Возраст (полных лет)</div>
+						<div class="tests__cell tests__cell-input">
+							<input
+								type="text"
+								required
+								class="tests__input tests__input-text"
+								id="age"
+								placeholder="Ваш возраст"
+							/>
+						</div>
+					</div>
+					<div class="tests__row">
+						<div class="tests__cell tests__cell-field">Должность</div>
+						<div class="tests__cell tests__cell-input">
+							<input
+								type="text"
+								required
+								class="tests__input tests__input-text"
+								id="job"
+								placeholder="Ваша дожность"
+							/>
+						</div>
+					</div>
+					<div class="tests__row">
+						<div class="tests__cell tests__cell-field">Подразделение</div>
+						<div class="tests__cell tests__cell-input">
+							<input
+								type="text"
+								required
+								class="tests__input tests__input-text"
+								id="otdel"
+								placeholder="Ваше подразделение"
+							/>
+						</div>
+					</div>
+					<div class="tests__row">
+						<div class="tests__cell tests__cell-field">Дата заполнения</div>
+						<div class="tests__cell tests__cell-input">
+							<input type="date" class="tests__input tests__input-date" id="date" />
+						</div>
+					</div>
 				</div>
-				<a href="https://google.com/tests/1" target="_blank" class="btn-reset title tests__link"> Перейти </a>
-			</div>
-			<div class="tests__test">
-				<div class="tests__container-text">
-					<h3 class="title title__h3 tests__title">Название теста в две строки для примера</h3>
-					<p class="title tests__descr">
-						Пара строчек текста, описывающие то, о чем будут вопросы/содержание теста
+				<div class="tests__body">
+					<h3 class="title title__h3">Инструкция</h3>
+					<p class="title tests__descr tests__descr-black">
+						Перед вами опросник с двумя колонками с противоположными по смыслу суждениями. Каждое из них –
+						своеобразный параметр психологического климата в коллективе. В двух колонках представлены
+						суждения, соответствующие противоположным признакам психологического климата.
 					</p>
-				</div>
-				<a href="https://google.com/tests/2" target="_blank" class="btn-reset title tests__link"> Перейти </a>
-			</div>
-			<div class="tests__test">
-				<div class="tests__container-text">
-					<h3 class="title title__h3 tests__title">
-						Название теста в две строки для примера, а может даже и три строки
-					</h3>
-					<p class="title tests__descr">
-						Три строчки текста, описывающие то, о чем будут вопросы/содержание теста, и даже представить не
-						могу, что еще
+					<p class="title tests__descr tests__descr-black">
+						Между данными антиподами пятибалльная шкала. Чем ближе к левому или правому суждению в каждой
+						паре вы сделаете отметку, тем более выражен данный признак в вашем коллективе. Средний ответ «3»
+						является промежуточным, свидетельствующий о наличии обоих признаков. Укажите оценку, наиболее
+						соответствующую ситуации в вашем коллективе (группе).
 					</p>
+					<div class="tests__questions">
+						<h3 class="title title__h3">Вопросы</h3>
+						<div class="table tests__table">
+							<div class="table__row table__row-header">
+								<div class="table__cell table__cell-number">№</div>
+								<div class="table__cell table__cell-priznak table__cell-priznak-1">
+									Признак психологического климата
+								</div>
+								<div class="table__cell table__cell-mark">Оценка</div>
+								<div class="table__cell table__cell-priznak table__cell-priznak-2">
+									Признак психологического климата
+								</div>
+							</div>
+						</div>
+						<button class="btn-reset tests__button tests__button-form" type="submit">
+							Отправить результат
+						</button>
+					</div>
 				</div>
-				<a href="https://google.com/tests/1" target="_blank" class="btn-reset title tests__link"> Перейти </a>
-			</div>
+			</form>
 		</div>
 	</div>
 </section>
