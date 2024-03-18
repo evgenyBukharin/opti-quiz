@@ -22,7 +22,7 @@
 		}
 	}
 	&__cell {
-		padding: 8px 12px;
+		padding: 12px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -34,6 +34,12 @@
 		}
 		&-mark {
 			width: 18%;
+		}
+		&-question {
+			width: 75%;
+		}
+		&-answer {
+			width: 25%;
 		}
 	}
 	&__list {

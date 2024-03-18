@@ -1,6 +1,7 @@
 .tests {
+	min-height: 550px;
 	&__container {
-		padding-top: 20px;
+		padding-top: 40px;
 		padding-bottom: 20px;
 	}
 	&__list {
@@ -32,6 +33,9 @@
 		&-black {
 			color: var(--black-color);
 			margin: 0;
+			&-list {
+				padding-left: 4px;
+			}
 		}
 	}
 	&__button {
@@ -42,7 +46,7 @@
 		color: var(--blue-color);
 		font-weight: 600;
 		width: fit-content;
-		transition: color 0.3s ease, background 0.3s ease;
+		transition: color 0.4s ease, background 0.4s ease;
 		&-form {
 			background: var(--white-color);
 			border: 1px solid var(--blue-color);
@@ -55,6 +59,33 @@
 			background: var(--blue-color);
 			color: var(--white-color);
 		}
+		&-back {
+			font-size: 20px;
+			line-height: 1.2;
+			font-weight: 500;
+			color: var(--blue-color);
+			background: var(--white-color);
+			padding: 10px 16px;
+			border-radius: 12px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			gap: 8px;
+			transition: color 0.4s ease, background 0.4s ease;
+			&:hover {
+				background: var(--blue-color);
+				color: var(--white-color);
+				& .tests__arrow {
+					fill: white;
+				}
+			}
+		}
+	}
+	&__arrow {
+		width: 24px;
+		height: 24px;
+		fill: var(--blue-color);
+		transition: fill 0.4s ease;
 	}
 	&__form {
 		display: flex;
@@ -62,10 +93,12 @@
 		gap: 20px;
 	}
 	&__test {
-		margin-top: 20px;
 		display: flex;
 		flex-direction: column;
 		gap: 20px;
+		&-hidden {
+			display: none;
+		}
 	}
 	&__body {
 		padding: 26px 34px;
@@ -80,6 +113,8 @@
 		align-items: center;
 		&-default {
 			gap: 20px;
+		}
+		&-title {
 		}
 	}
 	&__cell {
@@ -141,4 +176,8 @@
 			grid-column: 12 span;
 		}
 	}
+}
+
+.node-hidden {
+	display: none;
 }

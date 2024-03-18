@@ -1,6 +1,6 @@
 <section class="tests">
 	<div class="container tests__container">
-		<div class="tests__selector tests__selector-hidden">
+		<div class="tests__selector">
 			<h2 class="title title__h2">Список доступных тестов</h2>
 			<div class="tests__list">
 				<div class="tests__item">
@@ -28,8 +28,16 @@
 				</div>
 			</div>
 		</div>
-		<div class="tests__test tests__test-1">
-			<h2 class="title title__h2 tests__title-test">Опросник 1</h2>
+		<div class="tests__test node-hidden tests__test-1" data-test="1">
+			<div class="tests__row tests__row-default tests__row-title">
+				<h2 class="title title__h2 tests__title-test">Опросник 1</h2>
+				<button class="btn-reset tests__button-back">
+					<svg class="tests__arrow">
+						<use xlink:href="./img/sprite.svg#back-arrow"></use>
+					</svg>
+					Назад
+				</button>
+			</div>
 			<form action="#" class="tests__form" method="get">
 				<div class="tests__body">
 					<div class="tests__row">
@@ -114,6 +122,100 @@
 								</div>
 							</div>
 						</div>
+						<button class="btn-reset tests__button tests__button-form" type="submit">
+							Отправить результат
+						</button>
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="tests__test node-hidden tests__test-2" data-test="2">
+			<div class="tests__row tests__row-default tests__row-title">
+				<h2 class="title title__h2 tests__title-test">Опросник 2</h2>
+				<button class="btn-reset tests__button-back">
+					<svg class="tests__arrow">
+						<use xlink:href="./img/sprite.svg#back-arrow"></use>
+					</svg>
+					Назад
+				</button>
+			</div>
+			<form action="#" class="tests__form" method="get">
+				<div class="tests__body">
+					<div class="tests__row">
+						<div class="tests__cell tests__cell-field">ФИО оцениваемого</div>
+						<div class="tests__cell tests__cell-input">
+							<input
+								type="text"
+								required
+								class="tests__input tests__input-text"
+								id="fio"
+								placeholder="Ваше ФИО"
+							/>
+						</div>
+					</div>
+					<div class="tests__row">
+						<div class="tests__cell tests__cell-field">Возраст (полных лет)</div>
+						<div class="tests__cell tests__cell-input">
+							<input
+								type="text"
+								required
+								class="tests__input tests__input-text"
+								id="age"
+								placeholder="Ваш возраст"
+							/>
+						</div>
+					</div>
+					<div class="tests__row">
+						<div class="tests__cell tests__cell-field">Должность</div>
+						<div class="tests__cell tests__cell-input">
+							<input
+								type="text"
+								required
+								class="tests__input tests__input-text"
+								id="job"
+								placeholder="Ваша дожность"
+							/>
+						</div>
+					</div>
+					<div class="tests__row">
+						<div class="tests__cell tests__cell-field">Подразделение</div>
+						<div class="tests__cell tests__cell-input">
+							<input
+								type="text"
+								required
+								class="tests__input tests__input-text"
+								id="otdel"
+								placeholder="Ваше подразделение"
+							/>
+						</div>
+					</div>
+					<div class="tests__row">
+						<div class="tests__cell tests__cell-field">Дата заполнения</div>
+						<div class="tests__cell tests__cell-input">
+							<input type="date" class="tests__input tests__input-date" id="date" />
+						</div>
+					</div>
+				</div>
+				<div class="tests__body">
+					<h3 class="title title__h3">Инструкция</h3>
+					<p class="title tests__descr tests__descr-black">
+						Вам предлагается 10 утверждений, отражающих Ваше отношение к подразделению, в котором Вы сейчас
+						работаете, и к организации в целом. Оцените степень Вашего согласия с данными утверждениями по
+						следующей пятибалльной шкале: <br />
+					</p>
+					<p class="title tests__descr tests__descr-black tests__descr-black-list">
+						1&nbsp;&nbsp;–&nbsp;&nbsp;абсолютно не согласен;<br />
+						2&nbsp;&nbsp;–&nbsp;&nbsp;скорее не согласен;<br />
+						3&nbsp;&nbsp;–&nbsp;&nbsp;затрудняюсь ответить;<br />
+						4&nbsp;&nbsp;–&nbsp;&nbsp;скорее согласен;<br />
+						5&nbsp;&nbsp;–&nbsp;&nbsp;полностью согласен.<br />
+					</p>
+					<p class="title tests__descr tests__descr-black">
+						Поставьте соответствующую цифру напротив каждого утверждения.
+					</p>
+					<div class="tests__questions">
+						<h3 class="title title__h3">Вопросы</h3>
+						<div class="table tests__table"></div>
 						<button class="btn-reset tests__button tests__button-form" type="submit">
 							Отправить результат
 						</button>
