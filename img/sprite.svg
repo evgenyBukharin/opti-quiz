@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg viewBox="0 0 32 32"
+     xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink">
+    <style>:root&gt;svg{display:none}:root&gt;svg:target{display:block}</style>
+    <svg viewBox="0 0 32 32"
+         id="back-arrow"
+         xmlns="http://www.w3.org/2000/svg">
+        <path d="M10.1 23a1 1 0 000-1.41L5.5 17h23.55a1 1 0 000-2H5.53l4.57-4.57A1 1 0 008.68 9l-6.36 6.37a.9.9 0 000 1.27L8.68 23a1 1 0 001.42 0z" />
+    </svg>
+</svg>
